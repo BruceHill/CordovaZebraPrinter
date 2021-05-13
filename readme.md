@@ -1,1 +1,1 @@
-# CordovaZebraPrinter
+# cordova-plugin-zebra-printer
