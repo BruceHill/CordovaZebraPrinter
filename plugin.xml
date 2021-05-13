@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        id="za.co.mobility.plugins.zebra"
+        version="0.0.1">
+
+  <name>Zebra</name>
+
+  <engines>
+    <engine name="cordova" version=">=3.4.0"/>
+  </engines>
+
+  <asset src="www/zebra.js" target="js/zebra.js"/>
+
+  <js-module src="www/zebra.js" name="zebra">
+    <clobbers target="zebra" />
+  </js-module>
+
+  <platform name="android">
+
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="Zebra">
+        <param name="android-package" value="za.co.mobility.plugins.Zebra"/>
+      </feature>
+    </config-file>
+
+    <source-file src="src/android/DiscoveredPrinterWrapper.java" target-dir="src/za/co/mobility/plugins/zebra/"/>
+	<source-file src="src/android/PrintTask.java" target-dir="src/za/co/mobility/plugins/zebra/"/>
+	<source-file src="src/android/SelectPrinterDialog.java" target-dir="src/za/co/mobility/plugins/zebra/"/>
+	<source-file src="src/android/SettingsHelper.java" target-dir="src/za/co/mobility/plugins/zebra/"/>
+	<source-file src="src/android/Zebra.java" target-dir="src/za/co/mobility/plugins/zebra/"/>
+	<source-file src="src/android/ZebraHelper.java" target-dir="src/za/co/mobility/plugins/zebra/"/>
+  </platform>
+  
+</plugin>
