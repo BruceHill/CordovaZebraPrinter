@@ -1,1 +1,1 @@
-# cordova-plugin-zebra-printer
+# za.co.mobility.plugins.zebra
